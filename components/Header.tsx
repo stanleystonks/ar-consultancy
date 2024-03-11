@@ -12,6 +12,7 @@ import {
 
 
 import { Menu } from "lucide-react";
+import Image from "next/image";
 
 const navLinks = [
   {
@@ -48,7 +49,7 @@ export default function Header() {
   };
   return (
     <div className="relative flex flex-col justify-between gap-6">
-      <nav className="hidden bg-card-foreground px-12 py-6 md:flex lg:px-20 xl:justify-end xl:bg-card xl:py-10 2xl:py-10">
+      <nav className="hidden bg-card-foreground px-12 py-6 md:flex lg:px-20 xl:justify-end xl:bg-card xl:py-10">
         <ul className="flex w-full items-center justify-between xl:w-3/5">
           {navLinks.map((link) => (
             <li key={link.id}>
@@ -75,9 +76,11 @@ export default function Header() {
         <div className="h-0.5 w-[6%] bg-foreground"></div>
       </div>
 
-      <img
-        src="/Marvin.jpg"
+      <Image
+        src="/marvin-new_fklbwl.png"
         alt="Photo of Marvin Kuijs"
+        width={1565}
+        height={1838}
         className="absolute right-[-2rem] top-[10rem] z-[-4] w-[15rem] xs:right-0 sm:right-6 md:right-[-2rem] md:w-[29rem] lg:w-[38rem] xl:w-[40rem] 2xl:right-24 2xl:w-[42rem] xl:bottom-0"
       />
 

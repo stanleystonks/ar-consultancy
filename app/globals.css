@@ -74,14 +74,17 @@
     @apply border-border;
   }
   body {
-    @apply font-gibson bg-background text-foreground overflow-x-clip;
+    @apply overflow-x-clip bg-background font-gibson text-foreground;
   }
   p {
-    @apply text-base sm:text-xl mb-5 md:mb-3 font-thin;
+    @apply mb-5 text-base font-thin sm:text-xl md:mb-3;
+  }
+  li {
+    @apply text-base sm:text-xl;
   }
   h1,
   h2,
   h3 {
-    @apply mb-8;
+    @apply mb-8 font-medium;
   }
 }
