@@ -114,7 +114,7 @@ export default function Header() {
               </SheetTrigger>
               <SheetContent>
                 <SheetHeader>
-                  <SheetTitle className="text-muted-foreground">
+                  <SheetTitle className="text-muted-foreground text-center">
                     Marvin Kuijs
                   </SheetTitle>
                 </SheetHeader>

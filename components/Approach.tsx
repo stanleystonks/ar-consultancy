@@ -1,7 +1,7 @@
 export default function Approach() {
   return (
-    <section className="flex w-full flex-col px-8 md:px-12 lg:items-center lg:p-0">
-      <h2 className="mb-0 w-full border border-foreground px-4 py-6 text-xl sm:hidden">
+    <section className="mb-16 flex w-full flex-col px-8 md:px-12 lg:mb-0 lg:items-center lg:p-0">
+      <h2 className="mb-0 w-full border border-foreground px-6 py-6 text-xl sm:hidden">
         My Approach:
         <br />
         Tailored A&R Mastery
@@ -11,7 +11,7 @@ export default function Approach() {
       </h2>
 
       <div className="flex w-full flex-col items-center justify-center bg-[url('https://res.cloudinary.com/dbcydcneq/image/upload/v1710190351/ar-consultancy/studio-background_w6goyq.png')]">
-        <div className="flex flex-col border border-foreground bg-card px-4 py-6 lg:w-3/5 lg:border-none lg:bg-background lg:px-16 lg:py-12 xl:px-36 xl:py-16 ">
+        <div className="flex flex-col border border-foreground bg-card px-6 py-6 lg:w-3/5 lg:border-none lg:bg-background lg:px-16 lg:py-12 xl:px-36 xl:py-16 ">
           <p className="font-medium uppercase">
             Personalized Online Consultations:
           </p>
@@ -37,8 +37,8 @@ export default function Approach() {
         </div>
       </div>
 
-      <div className="w-full flex justify-center items-center lg:bg-foreground">
-        <div className="border border-foreground px-4 py-6 lg:w-3/5 lg:border-none lg:bg-card lg:px-16 lg:py-12 xl:px-36 xl:py-10">
+      <div className="flex w-full items-center justify-center lg:bg-foreground">
+        <div className="border w-full border-foreground px-6 py-6 lg:w-3/5 lg:border-none lg:bg-card lg:px-16 lg:py-12 xl:px-36 xl:py-10">
           <h3 className="text-xl lg:hidden">
             <span>Consultation Package:</span>
             <br />

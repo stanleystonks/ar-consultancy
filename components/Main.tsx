@@ -2,6 +2,7 @@ import Approach from "./Approach";
 import Artists from "./Artists";
 import Clients from "./Clients";
 import Contact from "./Contact";
+import Footer from "./Footer";
 
 export default function Main() {
   return (
@@ -10,6 +11,7 @@ export default function Main() {
       <Artists />
       <Approach />
       <Contact />
+      <Footer />
     </main>
   );
 }
