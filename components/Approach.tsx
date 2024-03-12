@@ -1,13 +1,12 @@
 export default function Approach() {
   return (
-    <section className="mb-16 flex w-full flex-col px-8 md:px-12 lg:mb-0 lg:items-center lg:p-0">
-      <h2 className="mb-0 w-full border border-foreground px-6 py-6 text-xl sm:hidden">
-        My Approach:
-        <br />
+    <section
+      id="approach"
+      className="mb-16 flex w-full flex-col px-8 md:px-12 lg:mb-0 lg:items-center lg:p-0"
+    >
+      <h2 className="mb-0 w-full border border-foreground px-6 py-6 text-xl sm:text-2xl lg:w-3/5 lg:border-none lg:bg-card lg:text-center xl:py-10">
+        My Approach: <br className="sm:hidden" />
         Tailored A&R Mastery
-      </h2>
-      <h2 className="mb-0 hidden w-full border border-foreground px-4 py-6 sm:block sm:text-2xl md:text-2xl lg:w-3/5 lg:border-none lg:bg-card lg:text-center xl:py-10">
-        My Approach: Tailored A&R Mastery
       </h2>
 
       <div className="flex w-full flex-col items-center justify-center bg-[url('https://res.cloudinary.com/dbcydcneq/image/upload/v1710190351/ar-consultancy/studio-background_w6goyq.png')]">
@@ -38,18 +37,13 @@ export default function Approach() {
       </div>
 
       <div className="flex w-full items-center justify-center lg:bg-foreground">
-        <div className="border w-full border-foreground px-6 py-6 lg:w-3/5 lg:border-none lg:bg-card lg:px-16 lg:py-12 xl:px-36 xl:py-10">
-          <h3 className="text-xl lg:hidden">
-            <span>Consultation Package:</span>
-            <br />
-            <span className="font-thin">Price on Request</span>
+        <div className="w-full border border-foreground px-6 py-6 lg:w-3/5 lg:border-none lg:bg-card lg:px-16 lg:py-12 xl:px-36 xl:py-10">
+          <h3 className="text-xl lg:mb-2 lg:text-2xl">
+            <span>Consultation Package:</span> <br className="lg:hidden" />
+            <span className="font-thin lg:font-medium">Price on Request</span>
           </h3>
 
-          <h3 className="mb-2 hidden text-2xl lg:block">
-            Consultation Package: Price on Request
-          </h3>
-
-          <p className="text-xl italic lg:text-base lg:font-medium lg:not-italic">
+          <p className="text-xl italic lg:text-base lg:font-medium lg:not-italic lg:text-muted-foreground">
             * Clients are accepted on the basis of approval.
           </p>
         </div>

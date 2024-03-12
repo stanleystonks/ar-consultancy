@@ -6,33 +6,35 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 0, 0%, 5.1%;
+    scroll-behavior: smooth;
 
-    --card: 0, 0%, 92.55%;
-    --card-foreground: 0, 0%, 10.2%;
+    --background: 0 0% 100%;
+    --foreground: 0 0% 10.2%;
+
+    --card: 0 0% 92.55%;
+    --card-foreground: 0 0% 10.2%;
 
     --popover: 0 0% 100%;
     --popover-foreground: 0 0% 3.9%;
 
     --primary: 0 0% 9%;
-    --primary-foreground: 0 0% 98%;
+    --primary-foreground: 0 0% 100%;
 
     --secondary: 0 0% 96.1%;
     --secondary-foreground: 0 0% 9%;
 
     --muted: 0 0% 96.1%;
-    --muted-foreground: 0, 0%, 43.53%;
+    --muted-foreground: 0, 0%, 44.71%;
 
-    --accent: 0 0% 96.1%;
+    --accent: 0 0% 92.55%;
     --accent-foreground: 0 0% 9%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
 
     --border: 0 0% 89.8%;
-    --input: 0 0% 89.8%;
-    --ring: 0 0% 9%;
+    --input: 0 0% 10.2%;
+    --ring: 0 0% 10.2%;
 
     --radius: 0.5rem;
     overflow-x: hidden;
@@ -75,9 +77,11 @@
   }
   body {
     @apply overflow-x-clip bg-background font-gibson text-foreground;
+    display: flex;
+    flex-direction: column;
   }
   p {
-    @apply mb-5 text-base font-thin sm:text-xl md:mb-3;
+    @apply mb-5 text-base font-thin sm:text-xl md:mb-3 xl:mb-5;
   }
   li {
     @apply text-base sm:text-xl;
@@ -86,5 +90,18 @@
   h2,
   h3 {
     @apply mb-8 font-medium;
+  }
+}
+
+@layer utilities {
+  .custom-height-xl {
+    min-height: max(55rem, 100vh);
+  }
+  .custom-height-2xl {
+    min-height: max(57rem, 100dvh);
+  }
+
+  .custom-height-div-2xl {
+    min-height: max(20rem, 34vh);
   }
 }

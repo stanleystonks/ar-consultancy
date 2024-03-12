@@ -53,7 +53,7 @@ export default function Clients() {
       id="clients"
       className="flex w-full flex-col items-center justify-center xs:justify-start"
     >
-      <h2 className="w-full bg-foreground py-6 text-center text-xl text-white md:text-2xl xl:py-10">
+      <h2 className="w-full bg-foreground py-6 text-center text-xl text-background md:text-2xl xl:py-10">
         My Clients
       </h2>
       <div className="flex w-full flex-wrap items-center justify-center gap-6 py-12 px-8 md:px-12 lg:px-20 xl:py-10">
