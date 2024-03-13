@@ -87,7 +87,7 @@ export default function Contact() {
 
           <div className="flex items-center gap-3">
             {/* Facebook */}
-            <Link href="/">
+            <a href="/" target="blank">
               <svg
                 className="w-8 lg:w-12"
                 viewBox="0 0 45 46"
@@ -114,9 +114,9 @@ export default function Contact() {
                   </clipPath>
                 </defs>
               </svg>
-            </Link>
+            </a>
             {/* Instagram */}
-            <Link href="/">
+            <a href="/" target="blank">
               <svg
                 className="w-8 lg:w-12"
                 viewBox="0 0 46 46"
@@ -141,9 +141,9 @@ export default function Contact() {
                   </clipPath>
                 </defs>
               </svg>
-            </Link>
+            </a>
             {/* LinkedIn */}
-            <Link href="/">
+            <a href="/" target="blank">
               <svg
                 className="w-8 lg:w-12"
                 viewBox="0 0 46 46"
@@ -155,7 +155,7 @@ export default function Contact() {
                   fill="#1A1A1A"
                 />
               </svg>
-            </Link>
+            </a>
           </div>
         </div>
       </div>

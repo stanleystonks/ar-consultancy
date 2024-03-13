@@ -98,10 +98,10 @@
     min-height: max(55rem, 100vh);
   }
   .custom-height-2xl {
-    min-height: max(57rem, 100dvh);
+    min-height: min(100dvh, 58rem);
   }
 
   .custom-height-div-2xl {
-    min-height: max(20rem, 34vh);
+    min-height: min(34vh, 22rem);
   }
 }

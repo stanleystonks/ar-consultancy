@@ -1,4 +1,5 @@
 "use client";
+
 import Link from "next/link";
 import { Button } from "./ui/button";
 import {
@@ -33,10 +34,19 @@ const navLinks = [
 ];
 
 export default function Header() {
-  const handleClose = () => {
+  const handleClose = (href: string) => {
+    handleScroll(href);
     const closeButton = document.getElementById("close");
     closeButton?.click();
   };
+
+  const handleScroll = (href: string) => {
+    const targetSection = document.querySelector(href);
+    if (targetSection) {
+      targetSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <header className="xl:custom-height-2xl relative flex flex-col gap-6">
       <nav className=" flex items-center justify-between bg-card-foreground px-8 py-4 md:px-12 md:py-6 lg:px-20 xl:justify-end xl:bg-card xl:py-10">
@@ -67,8 +77,9 @@ export default function Header() {
 
         <div className="translate-y-24 sm:translate-y-28 md:hidden">
           <Sheet>
-            <SheetTrigger>
-              <Menu />
+            <SheetTrigger asChild>
+              <Menu
+              />
             </SheetTrigger>
             <SheetContent>
               <SheetHeader>
@@ -77,20 +88,30 @@ export default function Header() {
                 </SheetTitle>
               </SheetHeader>
               <ul className="flex flex-col items-center justify-center gap-12">
+                <a
+                  target="blank"
+                  className="text-lg font-medium uppercase"
+                  href="https://en.wikipedia.org/wiki/Artists_and_repertoire"
+                >
+                  What is an A&R?
+                </a>
                 {navLinks.map((link, index) => (
                   <li key={index}>
                     <Link
                       className="text-lg font-medium uppercase"
                       href={link.href}
                       replace
-                      onClick={handleClose}
+                      onClick={() => handleClose(link.href)}
                     >
                       {link.text}
                     </Link>
                   </li>
                 ))}
               </ul>
-              <SheetClose className="hidden" asChild>
+              <SheetClose
+                className="hidden"
+                asChild
+              >
                 <button id="close"></button>
               </SheetClose>
             </SheetContent>
@@ -98,7 +119,7 @@ export default function Header() {
         </div>
       </nav>
 
-      <div className="absolute left-0 right-0 2xl:top-[30rem] top-[28rem] -z-10 hidden w-full items-center justify-between gap-24 xl:flex">
+      <div className="absolute left-0 right-0 top-[28rem] -z-10 hidden w-full items-center justify-between gap-24 xl:flex 2xl:top-[30rem]">
         <div className="h-0.5 w-[61%] bg-foreground"></div>
         <div className="h-0.5 w-[6%] bg-foreground"></div>
       </div>
@@ -142,22 +163,27 @@ export default function Header() {
           <Image
             src="/marvin-new_fklbwl.png"
             alt="Photo of Marvin Kuijs"
+            priority
             width={1565}
             height={1838}
-            className="absolute bottom-0 right-[-2rem] w-[15rem] xs:right-0 sm:right-6 sm:w-[16rem] md:w-[20rem] lg:right-0 lg:w-[28rem] xl:bottom-[-29%] 2xl:bottom-[-39%] xl:-z-10 xl:w-[40rem] 2xl:right-16 2xl:w-[42rem]"
+            className="absolute bottom-0 right-[-2rem] w-[15rem] xs:right-0 sm:right-6 sm:w-[16rem] md:w-[20rem] lg:right-0 lg:w-[28rem] xl:bottom-[-29%] xl:-z-10 xl:w-[40rem] 2xl:bottom-[-42%] 2xl:right-16 2xl:w-[42rem]"
           />
         </section>
 
         <div className="mb-4 mt-[12rem] flex w-full flex-col items-center justify-center gap-2 px-8 py-4 xs:mt-[10rem] sm:flex-row md:mt-[12rem] md:gap-6 md:py-[2rem] xl:mb-10 xl:mt-0 xl:justify-start xl:px-20 xl:py-0 2xl:mb-4 2xl:gap-16">
-          <Button className="rounded-2xl px-8 py-4 text-lg md:px-10 md:py-6 md:text-xl 2xl:px-12 2xl:py-8">
-            Book Now
-          </Button>
-          <Button
-            variant="outline"
-            className="rounded-2xl px-8 py-4 text-lg md:px-10 md:py-6 md:text-xl 2xl:px-12 2xl:py-8"
-          >
-            View Portfolio
-          </Button>
+          <Link href="#contact" replace>
+            <Button className="rounded-2xl px-8 py-4 text-lg md:px-10 md:py-6 md:text-xl 2xl:px-12 2xl:py-8">
+              Book Now
+            </Button>
+          </Link>
+          <Link href="/portfolio" replace>
+            <Button
+              variant="outline"
+              className="rounded-2xl px-8 py-4 text-lg md:px-10 md:py-6 md:text-xl 2xl:px-12 2xl:py-8"
+            >
+              View Portfolio
+            </Button>
+          </Link>
         </div>
       </section>
     </header>

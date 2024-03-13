@@ -99,12 +99,12 @@ export default function Artists() {
           >
             <Image
               src={artist.src}
-              width={105}
-              height={105}
+              width={500}
+              height={500}
               alt={artist.name}
               className="w-full"
             />
-            <span className="text-center text-sm xl:text-base font-medium">
+            <span className="text-center text-sm font-medium xl:text-base">
               {artist.name}
             </span>
           </div>
