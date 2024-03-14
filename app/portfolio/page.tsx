@@ -1,13 +1,9 @@
-import { Button } from "@/components/ui/button";
-import Link from "next/link";
-
 export default function Portfolio() {
   return (
     <>
       <main className="h-screen">
         <iframe
-          allowFullScreen={true} // Changed according to React's camelCase convention
-          scrolling="no"
+          allowFullScreen={true}
           className="fp-iframe"
           src="https://heyzine.com/flip-book/ef7efa1a16.html"
           style={{

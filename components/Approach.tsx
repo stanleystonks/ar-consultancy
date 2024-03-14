@@ -4,7 +4,7 @@ export default function Approach() {
       id="approach"
       className="mb-16 flex w-full flex-col px-8 md:px-12 lg:mb-0 lg:items-center lg:p-0"
     >
-      <h2 className="mb-0 w-full border border-foreground px-6 py-6 text-xl sm:text-2xl lg:w-3/5 lg:border-none lg:bg-card lg:text-center xl:py-10">
+      <h2 className="mb-0 w-full border border-foreground px-6 py-6 text-xl sm:text-2xl lg:w-3/5 lg:border-none lg:bg-card lg:text-center xl:text-3xl xl:py-10">
         My Approach: <br className="sm:hidden" />
         Tailored A&R Mastery
       </h2>

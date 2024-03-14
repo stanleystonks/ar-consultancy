@@ -90,6 +90,7 @@ const config = {
       xs: "475px",
       ...defaultTheme.screens,
       sm: "576px",
+     '4xl': "1720px"
     },
   },
   plugins: [require("tailwindcss-animate")],

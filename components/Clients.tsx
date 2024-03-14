@@ -4,45 +4,45 @@ import Image from "next/image";
 
 const clients = [
   {
-    src: "/client-universal_vvtm9a.png",
+    src: "/universal_jb3lbs.png",
     width: 219,
     height: 99,
     alt: "Universal Studios logo",
   },
   {
-    src: "/client-eurovision_zumwjv.png",
-    width: 176,
-    height: 79,
+    src: "/eurovision_ygpc5z.png",
+    width: 167,
+    height: 66,
     alt: "Eurovision logo",
   },
   {
-    src: "/client-sony_jmiojt.png",
-    width: 239,
-    height: 99,
+    src: "/sony_q8lxha.png",
+    width: 149,
+    height: 66,
     alt: "Sony Music logo",
   },
   {
-    src: "/client-bmg_bdzejk.png",
-    width: 169,
-    height: 79,
+    src: "/bmg_oas8fq.png",
+    width: 142,
+    height: 60,
     alt: "BMG logo",
   },
   {
-    src: "/client-warner_bx3dq4.png",
+    src: "/warner-2_yaqbqq.png",
     width: 136,
     height: 99,
     alt: "Warner Group logo",
   },
   {
-    src: "/client-thevoice_lbrnbu.png",
-    width: 141,
-    height: 89,
+    src: "/the-voice_v3hkrk.png",
+    width: 116,
+    height: 66,
     alt: "The Voice logo",
   },
   {
-    src: "/client-theorchard_ufboxr.png",
-    width: 191,
-    height: 75,
+    src: "/orchard_x9frah.png",
+    width: 180,
+    height: 66,
     alt: "The Orchard logo",
   },
 ];
@@ -53,10 +53,10 @@ export default function Clients() {
       id="clients"
       className="flex w-full flex-col items-center justify-center xs:justify-start"
     >
-      <h2 className="w-full bg-foreground py-6 text-center text-xl text-background md:text-2xl xl:py-10">
+      <h2 className="w-full bg-foreground py-6 text-center text-xl text-background md:text-2xl xl:py-10 xl:text-3xl">
         My Clients
       </h2>
-      <div className="flex w-full flex-wrap items-center justify-center gap-6 py-12 px-8 md:px-12 lg:px-20 xl:py-10">
+      <div className="flex w-full flex-wrap items-center justify-center gap-12 px-8 py-12 md:px-12 lg:px-20 xl:py-20">
         {clients.map((client) => (
           <Image
             src={client.src}

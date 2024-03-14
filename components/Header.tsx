@@ -166,7 +166,7 @@ export default function Header() {
             priority
             width={1565}
             height={1838}
-            className="absolute bottom-0 right-[-2rem] w-[15rem] xs:right-0 sm:right-6 sm:w-[16rem] md:w-[20rem] lg:right-0 lg:w-[28rem] xl:bottom-[-29%] xl:-z-10 xl:w-[40rem] 2xl:bottom-[-42%] 2xl:right-16 2xl:w-[42rem]"
+            className="absolute bottom-0 right-[-2rem] w-[15rem] xs:right-0 sm:right-6 sm:w-[16rem] md:w-[20rem] lg:right-0 lg:w-[28rem] xl:bottom-[-29%] xl:-z-10 xl:w-[40rem] 2xl:bottom-[-42%] 2xl:right-16 2xl:w-[44rem] 4xl:w-[45rem]"
           />
         </section>
 

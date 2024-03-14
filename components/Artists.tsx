@@ -88,7 +88,7 @@ const artists = [
 export default function Artists() {
   return (
     <section id="artists" className="flex w-full flex-col pb-6">
-      <h2 className="w-full bg-foreground py-6 text-center text-xl text-background md:text-2xl xl:py-10">
+      <h2 className="w-full bg-foreground py-6 text-center text-xl text-background md:text-2xl xl:text-3xl xl:py-10">
         Artists I've Worked with & Produced
       </h2>
       <div className="flex w-full flex-wrap items-center justify-center gap-8 p-6 px-8 md:px-12 lg:px-20 xl:py-10">

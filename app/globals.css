@@ -78,6 +78,7 @@
   body {
     @apply text-foreground;
     display: flex;
+    max-width: 2100px;
     flex-direction: column;
     background-color: white; 
     background-color: var(--background);

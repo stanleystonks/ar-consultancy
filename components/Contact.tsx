@@ -86,7 +86,7 @@ export default function Contact() {
 
           <div className="flex items-center gap-3">
             {/* Facebook */}
-            <a href="/" target="blank">
+            <a href="https://www.facebook.com/MarvinKuijs/" target="blank">
               <svg
                 className="w-8 lg:w-12"
                 viewBox="0 0 45 46"
@@ -142,7 +142,7 @@ export default function Contact() {
               </svg>
             </a>
             {/* LinkedIn */}
-            <a href="/" target="blank">
+            <a href="https://www.linkedin.com/in/marvin-kuijs-4b01b1a/?originalSubdomain=nl" target="blank">
               <svg
                 className="w-8 lg:w-12"
                 viewBox="0 0 46 46"
