@@ -17,13 +17,6 @@ export default function Portfolio() {
           }}
         ></iframe>
       </main>
-      <footer className="flex items-center justify-center py-12">
-        <Link href="/">
-          <Button variant="outline" className="rounded-lg p-6 text-xl">
-            &larr; Return to Home Page
-          </Button>
-        </Link>
-      </footer>
     </>
   );
 }

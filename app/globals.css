@@ -76,9 +76,15 @@
     @apply border-border;
   }
   body {
-    @apply overflow-x-clip bg-background font-gibson text-foreground;
+    @apply text-foreground;
     display: flex;
     flex-direction: column;
+    background-color: white; 
+    background-color: var(--background);
+    color: #1A1A1A;
+    color: hsl(var(--foreground));
+    overflow-x: clip;
+    font-family: canada-type-gibson, sans-serif;
   }
   p {
     @apply mb-5 text-base font-thin sm:text-xl md:mb-3 xl:mb-5;
