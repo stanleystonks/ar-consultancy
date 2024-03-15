@@ -63,7 +63,7 @@ export default function Clients() {
             width={client.width}
             height={client.height}
             alt={client.alt}
-            className="w-[9rem] 2xl:w-[11rem]"
+            className="w-[7rem] 2xl:w-[9rem]"
             key={client.src}
           />
         ))}

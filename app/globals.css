@@ -80,9 +80,9 @@
     display: flex;
     max-width: 2100px;
     flex-direction: column;
-    background-color: white; 
+    background-color: white;
     background-color: var(--background);
-    color: #1A1A1A;
+    color: #1a1a1a;
     color: hsl(var(--foreground));
     overflow-x: clip;
     font-family: canada-type-gibson, sans-serif;
@@ -101,14 +101,18 @@
 }
 
 @layer utilities {
-  .custom-height-xl {
-    min-height: max(55rem, 100vh);
+  .custom-height-4xl {
+    min-height: clamp(68rem, 100vh, 68rem);
   }
   .custom-height-2xl {
-    min-height: min(100dvh, 58rem);
+    min-height: clamp(64rem, 100dvh, 64rem);
   }
 
   .custom-height-div-2xl {
-    min-height: min(34vh, 22rem);
+    min-height: min(34vh, 19rem);
+  }
+
+  .custom-height-div-4xl {
+    min-height: min(34vh, 20rem);
   }
 }

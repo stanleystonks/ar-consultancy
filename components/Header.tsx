@@ -48,8 +48,8 @@ export default function Header() {
   };
 
   return (
-    <header className="xl:custom-height-2xl relative flex flex-col gap-6">
-      <nav className=" flex items-center justify-between bg-card-foreground px-8 py-4 md:px-12 md:py-6 lg:px-20 xl:justify-end xl:bg-card xl:py-10">
+    <header className="2xl:custom-height-2xl 4xl:custom-height-4xl relative flex flex-col gap-6 xl:min-h-[56rem]">
+      <nav className=" flex items-center justify-between bg-card-foreground px-8 py-4 md:px-12 md:py-6 lg:px-20 xl:justify-end xl:bg-card">
         <ul className="hidden w-full items-center justify-between md:flex xl:w-3/5">
           <a
             target="blank"
@@ -78,8 +78,7 @@ export default function Header() {
         <div className="translate-y-24 sm:translate-y-28 md:hidden">
           <Sheet>
             <SheetTrigger asChild>
-              <Menu
-              />
+              <Menu />
             </SheetTrigger>
             <SheetContent>
               <SheetHeader>
@@ -108,10 +107,7 @@ export default function Header() {
                   </li>
                 ))}
               </ul>
-              <SheetClose
-                className="hidden"
-                asChild
-              >
+              <SheetClose className="hidden" asChild>
                 <button id="close"></button>
               </SheetClose>
             </SheetContent>
@@ -119,25 +115,25 @@ export default function Header() {
         </div>
       </nav>
 
-      <div className="absolute left-0 right-0 top-[28rem] -z-10 hidden w-full items-center justify-between gap-24 xl:flex 2xl:top-[30rem]">
-        <div className="h-0.5 w-[61%] bg-foreground"></div>
-        <div className="h-0.5 w-[6%] bg-foreground"></div>
+      <div className="absolute left-0 right-0 top-[26rem] -z-10 hidden w-full items-center justify-between gap-24 xl:flex 2xl:top-[31.5rem] 4xl:top-[32rem]">
+        <div className="h-0.5 w-[55%] bg-foreground 2xl:h-1 2xl:w-[52vw] 4xl:w-[59vw]"></div>
+        <div className="h-0.5 w-[6%] bg-foreground 2xl:h-1 4xl:w-[8%]"></div>
       </div>
 
-      <section className="flex flex-col sm:pt-4 md:pt-8 lg:pt-14 xl:pt-20 2xl:min-h-[48rem] 2xl:pt-32">
+      <section className="flex flex-col sm:pt-4 md:pt-8 lg:pt-14 xl:pt-20 2xl:min-h-[48rem] 2xl:pt-36 4xl:pt-[10rem]">
         <h2 className="mb-[4rem] flex w-full px-8 md:px-12 lg:px-20 xl:mb-[3rem] 2xl:mb-[6rem] 2xl:h-[8rem]">
           <div className="flex flex-col">
-            <span className="mb-2 hidden text-[1.75rem] font-medium text-muted-foreground md:block lg:mb-4 lg:text-3xl xl:text-4xl 2xl:text-[2.82rem]">
+            <span className="mb-2 hidden text-[1.75rem] font-medium text-muted-foreground md:block lg:mb-4 lg:text-3xl xl:text-4xl 2xl:text-[2.92rem] 4xl:text-[3.55rem]">
               Unlock Your Music Career's Full Potential with
             </span>{" "}
-            <span className="text-4xl font-bold uppercase leading-[2.7rem] xs:pr-[5vw] sm:pr-[10rem] sm:text-5xl md:pr-[14rem] lg:pr-[20rem] lg:text-6xl xl:pr-[27rem] xl:text-7xl 2xl:pr-[28rem]">
+            <span className="text-4xl font-bold uppercase leading-[2.7rem] xs:pr-[5vw] sm:pr-[10rem] sm:text-5xl md:pr-[14rem] lg:pr-[20rem] lg:text-6xl xl:pr-[27rem] xl:text-7xl 2xl:pr-[28rem] 2xl:text-[4.7rem] 4xl:text-[5.7rem]">
               Expert A&R Consultancy
             </span>
           </div>
         </h2>
 
-        <section className="2xl:custom-height-div-2xl relative mt-6 flex w-full flex-col bg-card px-8 pt-8 xs:pb-8 md:px-12 lg:px-20 xl:mt-0 xl:min-h-[23rem] xl:bg-transparent">
-          <h3 className="mb-0 w-full translate-y-[-3rem] pr-[38vw] text-xl font-medium xs:text-xl md:text-3xl xl:mb-10 xl:translate-y-0">
+        <section className="2xl:custom-height-div-2xl 4xl:custom-height-div-4xl relative mt-6 flex w-full flex-col bg-card px-8 pt-8 xs:pb-8 md:px-12 lg:px-20 xl:mt-0 xl:min-h-[23rem] xl:bg-transparent 2xl:mt-24 4xl:mt-32">
+          <h3 className="mb-0 w-full translate-y-[-3rem] pr-[39vw] text-xl font-medium xs:text-xl md:text-3xl xl:mb-10 xl:translate-y-0">
             Are you ready to take your music to the next level?
           </h3>
 
@@ -166,7 +162,7 @@ export default function Header() {
             priority
             width={1565}
             height={1838}
-            className="absolute bottom-0 right-[-2rem] w-[15rem] xs:right-0 sm:right-6 sm:w-[16rem] md:w-[20rem] lg:right-0 lg:w-[28rem] xl:bottom-[-29%] xl:-z-10 xl:w-[40rem] 2xl:bottom-[-42%] 2xl:right-16 2xl:w-[44rem] 4xl:w-[45rem]"
+            className="absolute bottom-0 right-[-2rem] w-[15rem] xs:right-0 sm:right-6 sm:w-[16rem] md:w-[20rem] lg:right-0 lg:w-[28rem] xl:bottom-[-29%] xl:-z-10 xl:w-[42rem] 2xl:bottom-[-50%] 2xl:right-0 2xl:w-[50rem] 4xl:bottom-[-55%] 4xl:w-[53rem]"
           />
         </section>
 
