@@ -4,9 +4,9 @@ import Image from "next/image";
 
 const clients = [
   {
-    src: "/universal_jb3lbs.png",
-    width: 219,
-    height: 99,
+    src: "/universal_pa3lsh.png",
+    width: 176,
+    height: 66,
     alt: "Universal Studios logo",
   },
   {
@@ -58,14 +58,15 @@ export default function Clients() {
       </h2>
       <div className="flex w-full flex-wrap items-center justify-center gap-12 px-8 py-12 md:px-12 lg:px-20 xl:py-20">
         {clients.map((client) => (
-          <Image
-            src={client.src}
-            width={client.width}
-            height={client.height}
-            alt={client.alt}
-            className="w-[7rem] 2xl:w-[9rem]"
-            key={client.src}
-          />
+          <div key={client.src} className="w-[7rem] 2xl:w-[9rem] flex justify-center items-center">
+            <Image
+              src={client.src}
+              width={client.width}
+              height={client.height}
+              alt={client.alt}
+              className="w-full"
+            />
+          </div>
         ))}
       </div>
     </section>

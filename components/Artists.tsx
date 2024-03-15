@@ -95,7 +95,7 @@ export default function Artists() {
         {artists.map((artist) => (
           <div
             key={artist.src}
-            className="flex h-[7rem] w-[5rem] flex-col items-center justify-start xl:h-[11rem] xl:w-[9rem]"
+            className="flex h-[7rem] w-[5rem] flex-col items-center justify-start xl:h-[10rem] xl:w-[8rem]"
           >
             <Image
               src={artist.src}
