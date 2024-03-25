@@ -1,21 +1,57 @@
 "use client";
 
+import { useState } from "react";
 import { Button } from "./ui/button";
+import { toast } from "sonner";
 
 export default function Contact() {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [link, setLink] = useState("");
+  const [isSubmitted, setIsSubmitted] = useState(false);
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    setName("");
+    setEmail("");
+    setPhone("");
+    setLink("");
+    setIsSubmitted(true);
+
+    toast("Your request was sent successfully! ✔️");
+  };
   return (
     <section id="contact" className="relative flex w-full flex-col lg:pb-24">
       <h2 className="mb-0 flex w-full flex-col bg-foreground px-8 py-6 text-2xl uppercase text-background md:px-12 lg:px-20 lg:pb-10 lg:pt-24 lg:text-4xl">
         <span className="mb-1 font-light ">Get Started:</span>
-        <span className="font-bold md:text-3xl lg:text-5xl">Book Your Session Today!</span>
+        <span className="font-bold md:text-3xl lg:text-5xl">
+          Book Your Session Today!
+        </span>
       </h2>
+
+      {isSubmitted && (
+        <div className="top-[16rem] my-12 px-8 text-center md:px-12 lg:absolute lg:px-20 lg:pr-[65vw] lg:text-left xl:top-[18rem]">
+          <h3 className="text-xl font-bold lg:text-2xl xl:text-4xl">
+            Thanks for your request!
+          </h3>
+          <p className="xl:font-medium">
+            You have taken the first step towards the next level of your music
+            career.
+          </p>
+          <p className="xl:font-medium">
+            Marvin will contact you within the next 24 hours.
+          </p>
+        </div>
+      )}
 
       <div
         id="contact-form"
         className="flex flex-col lg:flex-row-reverse lg:items-end lg:justify-between"
       >
         <div className="lg:pb-18 bg-card px-8 pb-32 pt-12 md:px-12 lg:w-1/2 lg:translate-x-[-5rem] lg:px-20">
-          <form action="" className="flex flex-col">
+          <form onSubmit={handleSubmit} action="" className="flex flex-col">
             <label
               className="mb-1 font-medium lg:mb-2 xl:text-lg"
               htmlFor="name"
@@ -27,6 +63,8 @@ export default function Contact() {
               id="name"
               type="text"
               required
+              value={name}
+              onChange={(e) => setName(e.target.value)}
               className="mb-5 p-1 lg:mb-7 xl:p-2"
             />
             <label
@@ -40,7 +78,10 @@ export default function Contact() {
               id="email"
               type="text"
               required
+              value={email}
+              pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
               className="mb-5 p-1 lg:mb-7 xl:p-2"
+              onChange={(e) => setEmail(e.target.value)}
             />
             <label
               className="mb-1 font-medium lg:mb-2 xl:text-lg"
@@ -53,18 +94,24 @@ export default function Contact() {
               id="phone"
               type="text"
               className="mb-5 p-1 lg:mb-7 xl:p-2"
+              pattern="\+?([ -]?\d+)+|\(\d+\)([ -]\d+)"
+              value={phone}
+              onChange={(e) => setPhone(e.target.value)}
             />
             <label
               className="mb-1 font-medium lg:mb-2 xl:text-lg"
               htmlFor="spotify"
             >
-              Spotify Link to Your Music:
+              Link to Your Music:
             </label>
             <input
               name="spotify"
               id="spotify"
               type="text"
               className="mb-5 p-1 lg:mb-7 xl:p-2"
+              pattern="^(https?:\/\/|ftp:\/\/)?[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}(\/\S*)?$"
+              value={link}
+              onChange={(e) => setLink(e.target.value)}
             />
             <Button
               type="submit"
@@ -142,7 +189,10 @@ export default function Contact() {
               </svg>
             </a>
             {/* LinkedIn */}
-            <a href="https://www.linkedin.com/in/marvin-kuijs-4b01b1a/?originalSubdomain=nl" target="blank">
+            <a
+              href="https://www.linkedin.com/in/marvin-kuijs-4b01b1a/?originalSubdomain=nl"
+              target="blank"
+            >
               <svg
                 className="w-8 lg:w-12"
                 viewBox="0 0 46 46"
