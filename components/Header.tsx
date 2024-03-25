@@ -172,7 +172,7 @@ export default function Header() {
               Book Now
             </Button>
           </Link>
-          <a href="/portfolio.html" target="blank">
+          <a href="/portfolio" target="blank">
             <Button
               variant="outline"
               className="rounded-2xl px-8 py-4 text-lg md:px-10 md:py-6 md:text-xl 2xl:px-12 2xl:py-8"
