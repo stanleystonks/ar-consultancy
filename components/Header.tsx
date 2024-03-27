@@ -173,14 +173,16 @@ export default function Header() {
               Book Now
             </Button>
           </Link>
-          <a href="/portfolio" target="_blank" rel="noopener noreferrer">
+          <Link href="/portfolio" passHref legacyBehavior>
+            <a target="_blank" rel="noopener noreferrer">
               <Button
                 variant="outline"
                 className="rounded-2xl px-8 py-4 text-lg md:px-10 md:py-6 md:text-xl 2xl:px-12 2xl:py-8"
               >
                 View Portfolio
               </Button>
-          </a>
+            </a>
+          </Link>
         </div>
       </section>
     </header>

@@ -4,7 +4,6 @@ import { useEffect, useState } from "react";
 import { Button } from "./ui/button";
 import { toast } from "sonner";
 import { ValidationError, useForm } from "@formspree/react";
-import { Skeleton } from "./ui/skeleton";
 
 export default function Contact() {
   const [name, setName] = useState("");
@@ -12,7 +11,7 @@ export default function Contact() {
   const [phone, setPhone] = useState("");
   const [link, setLink] = useState("");
 
-  const [state, handleSubmit, reset] = useForm("xdoqwapp");
+  const [state, handleSubmit] = useForm("xdoqwapp");
 
   useEffect(() => {
     if (state.succeeded) {
@@ -25,17 +24,6 @@ export default function Contact() {
     }
   }, [state.succeeded]);
 
-  // const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-  //   // e.preventDefault();
-
-  //   setName("");
-  //   setEmail("");
-  //   setPhone("");
-  //   setLink("");
-  //   setIsSubmitted(true);
-
-  //   toast("Your request was sent successfully! ✔️");
-  // };
   return (
     <section id="contact" className="relative flex w-full flex-col lg:pb-24">
       <h2 className="mb-0 flex w-full flex-col bg-foreground px-8 py-6 text-2xl uppercase text-background md:px-12 lg:px-20 lg:pb-10 lg:pt-24 lg:text-4xl">
