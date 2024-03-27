@@ -13,6 +13,7 @@ import {
 
 import { Menu } from "lucide-react";
 import Image from "next/image";
+import React from "react";
 
 const navLinks = [
   {
@@ -172,13 +173,13 @@ export default function Header() {
               Book Now
             </Button>
           </Link>
-          <a href="/portfolio" target="blank">
-            <Button
-              variant="outline"
-              className="rounded-2xl px-8 py-4 text-lg md:px-10 md:py-6 md:text-xl 2xl:px-12 2xl:py-8"
-            >
-              View Portfolio
-            </Button>
+          <a href="/portfolio" target="_blank" rel="noopener noreferrer">
+              <Button
+                variant="outline"
+                className="rounded-2xl px-8 py-4 text-lg md:px-10 md:py-6 md:text-xl 2xl:px-12 2xl:py-8"
+              >
+                View Portfolio
+              </Button>
           </a>
         </div>
       </section>

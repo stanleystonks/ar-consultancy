@@ -1,27 +1,41 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Button } from "./ui/button";
 import { toast } from "sonner";
+import { ValidationError, useForm } from "@formspree/react";
+import { Skeleton } from "./ui/skeleton";
 
 export default function Contact() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [link, setLink] = useState("");
-  const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
+  const [state, handleSubmit, reset] = useForm("xdoqwapp");
 
-    setName("");
-    setEmail("");
-    setPhone("");
-    setLink("");
-    setIsSubmitted(true);
+  useEffect(() => {
+    if (state.succeeded) {
+      setName("");
+      setEmail("");
+      setPhone("");
+      setLink("");
 
-    toast("Your request was sent successfully! ✔️");
-  };
+      toast("Your request was sent successfully! ✔️");
+    }
+  }, [state.succeeded]);
+
+  // const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  //   // e.preventDefault();
+
+  //   setName("");
+  //   setEmail("");
+  //   setPhone("");
+  //   setLink("");
+  //   setIsSubmitted(true);
+
+  //   toast("Your request was sent successfully! ✔️");
+  // };
   return (
     <section id="contact" className="relative flex w-full flex-col lg:pb-24">
       <h2 className="mb-0 flex w-full flex-col bg-foreground px-8 py-6 text-2xl uppercase text-background md:px-12 lg:px-20 lg:pb-10 lg:pt-24 lg:text-4xl">
@@ -31,7 +45,7 @@ export default function Contact() {
         </span>
       </h2>
 
-      {isSubmitted && (
+      {state.succeeded && (
         <div className="top-[16rem] my-12 px-8 text-center md:px-12 lg:absolute lg:px-20 lg:pr-[65vw] lg:text-left xl:top-[18rem]">
           <h3 className="text-xl font-bold lg:text-2xl xl:text-4xl">
             Thanks for your request!
@@ -51,19 +65,20 @@ export default function Contact() {
         className="flex flex-col lg:flex-row-reverse lg:items-end lg:justify-between"
       >
         <div className="lg:pb-18 bg-card px-8 pb-32 pt-12 md:px-12 lg:w-1/2 lg:translate-x-[-5rem] lg:px-20">
-          <form onSubmit={handleSubmit} action="" className="flex flex-col">
+          <form onSubmit={handleSubmit} className="flex flex-col">
             <label
               className="mb-1 font-medium lg:mb-2 xl:text-lg"
               htmlFor="name"
             >
               Name:
             </label>
+            <ValidationError prefix="Name" field="name" errors={state.errors} />
             <input
               name="name"
               id="name"
               type="text"
-              required
               value={name}
+              required
               onChange={(e) => setName(e.target.value)}
               className="mb-5 p-1 lg:mb-7 xl:p-2"
             />
@@ -73,13 +88,18 @@ export default function Contact() {
             >
               Email:
             </label>
+            <ValidationError
+              prefix="Email"
+              field="email"
+              errors={state.errors}
+
+            />
             <input
               name="email"
               id="email"
               type="text"
-              required
               value={email}
-              pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+              required
               className="mb-5 p-1 lg:mb-7 xl:p-2"
               onChange={(e) => setEmail(e.target.value)}
             />
@@ -89,33 +109,44 @@ export default function Contact() {
             >
               Phone number:
             </label>
+            <ValidationError
+              prefix="Phone"
+              field="phone"
+              errors={state.errors}
+            />
             <input
               name="phone"
               id="phone"
               type="text"
               className="mb-5 p-1 lg:mb-7 xl:p-2"
-              pattern="\+?([ -]?\d+)+|\(\d+\)([ -]\d+)"
+              required
               value={phone}
               onChange={(e) => setPhone(e.target.value)}
             />
             <label
               className="mb-1 font-medium lg:mb-2 xl:text-lg"
-              htmlFor="spotify"
+              htmlFor="music-link"
             >
               Link to Your Music:
             </label>
+            <ValidationError
+              prefix="Music Link"
+              field="music-link"
+              errors={state.errors}
+            />
             <input
-              name="spotify"
-              id="spotify"
+              name="music-link"
+              id="music-link"
               type="text"
+              required
               className="mb-5 p-1 lg:mb-7 xl:p-2"
-              pattern="^(https?:\/\/|ftp:\/\/)?[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}(\/\S*)?$"
               value={link}
               onChange={(e) => setLink(e.target.value)}
             />
             <Button
               type="submit"
               className="m-auto mt-8 w-min rounded-lg text-lg md:p-6 lg:text-xl"
+              disabled={state.submitting}
             >
               Send Request
             </Button>
