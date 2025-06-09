@@ -1,4 +1,4 @@
-@import url("https://use.typekit.net/rih8whe.css");
+/* @import url("https://use.typekit.net/rih8whe.css"); */
 
 @tailwind base;
 @tailwind components;
@@ -85,7 +85,7 @@
     color: #1a1a1a;
     color: hsl(var(--foreground));
     overflow-x: clip;
-    font-family: canada-type-gibson, sans-serif;
+    /* font-family: canada-type-gibson, sans-serif; */
   }
   p {
     @apply mb-5 text-base font-thin sm:text-xl md:mb-3 xl:mb-5;

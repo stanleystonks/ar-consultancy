@@ -1,9 +1,12 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { Toaster } from "@/components/ui/sonner"
+import { Toaster } from "@/components/ui/sonner";
+import { League_Spartan } from "next/font/google";
 
-
-
+const leagueSpartan = League_Spartan({
+  subsets: ["latin"],
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: "Marvin Kuijs A&R Consultancy: Elevate Your Music Career",
@@ -17,8 +20,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body>{children}<Toaster /></body>
+    <html lang="en" className={leagueSpartan.className}>
+      <body>
+        {children}
+        <Toaster />
+      </body>
     </html>
   );
 }

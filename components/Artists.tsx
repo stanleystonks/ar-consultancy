@@ -4,83 +4,84 @@ import Image from "next/image";
 
 const artists = [
   {
-    src: "/snoop-dogg_b0j9lx.png",
+    src: "/SNOOP_hrutbl.png",
     name: "Snoop Dogg",
   },
   {
-    src: "/janet-jackson_ypq8zk.png",
+    src: "/JANNET_shwf7c.png",
     name: "Janet Jackson",
   },
+  { src: "/TEDDY_a6hylx.png", name: "Teddy Swims" },
   {
-    src: "/afrojack_dbqnfh.png",
-    name: "Afrojack",
-  },
-  {
-    src: "/shaggy_b0udk3.png",
+    src: "/SHAGGY_tq4a7u.png",
     name: "Shaggy",
   },
   {
-    src: "/pitbull_tlcajs.png",
+    src: "/PITBULL_qvuuru.png",
     name: "Pitbull",
   },
   {
-    src: "/nicky-minaj_s6inem.png",
+    src: "/NICKY_gkbuqu.png",
     name: "Nicky Minaj",
   },
   {
-    src: "/kat-deluna_ry3orx.png",
+    src: "/KAT_dexwmq.png",
     name: "Kat DeLuna",
   },
   {
-    src: "/tito-jackson_ajwvhr.png",
+    src: "/TITO_f7g0jm.png",
     name: "Tito Jackson",
   },
   {
-    src: "/joss-stone_h3jy8e.png",
+    src: "/JOSS_qjnyiz.png",
     name: "Joss Stone",
   },
   {
-    src: "/frank-mccomb_tuzlwd.png",
+    src: "/FRANK_vi2fyd.png",
     name: "Frank McComb",
   },
   {
-    src: "/daddy-yankee_k0fpft.png",
+    src: "/DADDY_ltnydm.png",
     name: "Daddy Yankee",
   },
   {
-    src: "/mario-winans_v8jvsu.png",
+    src: "/MARIO_nflq3d.png",
     name: "Mario Winans",
   },
   {
-    src: "/inna_ef6eah.png",
+    src: "/INNA_dhuhne.png",
     name: "INNA",
   },
   {
-    src: "/elephant-man_eytcvq.png",
-    name: "Elephant Man",
+    src: "/AFRO_etmumw.png",
+    name: "Afrojack",
   },
+  // {
+  //   src: "/elephant-man_eytcvq.png",
+  //   name: "Elephant Man",
+  // },
   {
-    src: "/mohombi_zirsin.png",
+    src: "/MOHO_ulgvdv.png",
     name: "Mohombi",
   },
   {
-    src: "/timmy-trumpet_nzzvxh.png",
+    src: "/TIMMY_tqhyoc.png",
     name: "Timmy Trumpet",
   },
   {
-    src: "/flo-rida_kfhi36.png",
+    src: "/FLO_bey89y.png",
     name: "Flo Rida",
   },
   {
-    src: "/chenoa_gw41q8.png",
+    src: "/CHENOA_yxckmn.png",
     name: "Chenoa",
   },
   {
-    src: "/alexandra-stan_he8glf.png",
+    src: "/ALE_STAN_gala2o.png",
     name: "Alexandra Stan",
   },
   {
-    src: "/fred-wesley_thaytj.png",
+    src: "/FRED_vmagtl.png",
     name: "Fred Wesley",
   },
 ];
@@ -88,7 +89,7 @@ const artists = [
 export default function Artists() {
   return (
     <section id="artists" className="flex w-full flex-col pb-6">
-      <h2 className="w-full bg-foreground py-6 text-center text-xl text-background md:text-2xl xl:text-3xl xl:py-10">
+      <h2 className="w-full bg-foreground py-6 text-center text-xl text-background md:text-2xl xl:py-10 xl:text-3xl">
         Artists I've Worked with & Produced
       </h2>
       <div className="flex w-full flex-wrap items-center justify-center gap-8 p-6 px-8 md:px-12 lg:px-20 xl:py-10">

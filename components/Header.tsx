@@ -24,10 +24,11 @@ const navLinks = [
     text: "Work process",
     href: "#approach",
   },
-  {
-    text: "Apply",
-    href: "#contact",
-  },
+  // {
+  //   text: "Apply",
+  //   href: "#contact",
+  // },
+  { text: "Book now", href: "https://stan.store/marvinkuijs" },
   {
     text: "Contact",
     href: "#contact-form",
@@ -54,7 +55,7 @@ export default function Header() {
         <ul className="hidden w-full items-center justify-between md:flex xl:w-3/5">
           <a
             target="blank"
-            className="text-base font-regular uppercase text-background xl:text-lg xl:text-foreground"
+            className="text-base font-medium uppercase text-background xl:text-lg xl:text-foreground"
             href="https://en.wikipedia.org/wiki/Artists_and_repertoire"
           >
             What is an A&R?
@@ -62,7 +63,7 @@ export default function Header() {
           {navLinks.map((link, index) => (
             <li key={index}>
               <Link
-                className="text-base font-regular uppercase text-background xl:text-lg xl:text-foreground"
+                className="text-base font-medium uppercase text-background xl:text-lg xl:text-foreground"
                 href={link.href}
                 replace
               >
@@ -134,29 +135,21 @@ export default function Header() {
         </h2>
 
         <section className="2xl:custom-height-div-2xl 4xl:custom-height-div-4xl relative mt-6 flex w-full flex-col bg-card px-8 pt-8 xs:pb-8 md:px-12 lg:px-20 xl:mt-0 xl:min-h-[23rem] xl:bg-transparent 2xl:mt-24 4xl:mt-32">
-          <h3 className="mb-0 w-full translate-y-[-3rem] pr-[39vw] text-xl font-medium xs:text-xl md:text-3xl xl:mb-10 xl:translate-y-0">
+          <h3 className="mb-0 w-full translate-y-[-3rem] pr-[39vw] text-xl font-bold xs:text-xl md:text-3xl xl:mb-10 xl:translate-y-0">
             Are you ready to take your music to the next level?
           </h3>
-
-          <p className="w-full pr-[45vw] text-xl sm:text-2xl lg:text-3xl xl:text-2xl">
-            I'm <span className="font-medium lg:font-thin">Marvin Kuijs</span>,
-            your personal A&R specialist.
+          <p className="w-full pr-[45vw] text-xl font-regular sm:text-2xl lg:text-3xl xl:text-2xl">
+            I'm <span>Marvin Kuijs</span>, your personal A&R expert.
           </p>
 
           <div className="absolute bottom-[-80%] left-0 w-full flex-col bg-transparent px-8 text-center md:px-12 lg:px-20 xl:static xl:px-0 xl:pr-[45vw] 2xl:pr-[50vw]">
-            <p className="text-lg sm:text-xl lg:text-2xl xl:text-left">
-              My expertise lies in thoroughly{" "}
-              <span className="font-medium">analyzing tracks</span> and
-              pinpointing{" "}
-              <span className="font-medium">areas for improvement</span> to{" "}
-              <span className="sm:font-medium">
-                upgrade your songs and artist brand
-              </span>{" "}
-              into a masterpiece worthy of{" "}
-              <span className="sm:font-medium">major labels</span>.
+            <p className="text-lg font-regular sm:text-xl lg:text-2xl xl:text-left">
+              From deep track analysis and artist branding to career guidance,
+              licensing, promotion, publishing and legal advice. I provide the
+              insider strategies you need to grow, build income, protect, and
+              elevate your music in today’s industry.
             </p>
           </div>
-
           <Image
             src="/marvin-new_fklbwl.png"
             alt="Photo of Marvin Kuijs"
@@ -168,8 +161,8 @@ export default function Header() {
         </section>
 
         <div className="mb-4 mt-[12rem] flex w-full flex-col items-center justify-center gap-2 px-8 py-4 xs:mt-[10rem] sm:flex-row md:mt-[12rem] md:gap-6 md:py-[2rem] xl:mb-10 xl:mt-0 xl:justify-start xl:px-20 xl:py-0 2xl:mb-4 2xl:gap-16">
-          <Link href="#contact" replace>
-            <Button className="rounded-2xl px-8 py-4 text-lg md:px-10 md:py-6 md:text-xl 2xl:px-12 2xl:py-8">
+          <Link href="https://stan.store/marvinkuijs" replace>
+            <Button className="rounded-sm px-8 py-4 text-lg md:px-10 md:py-6 md:text-xl 2xl:px-12 2xl:py-8">
               Book Now
             </Button>
           </Link>
@@ -177,7 +170,7 @@ export default function Header() {
             <a target="_blank" rel="noopener noreferrer">
               <Button
                 variant="outline"
-                className="rounded-2xl px-8 py-4 text-lg md:px-10 md:py-6 md:text-xl 2xl:px-12 2xl:py-8"
+                className="rounded-sm px-8 py-4 text-lg md:px-10 md:py-6 md:text-xl 2xl:px-12 2xl:py-8"
               >
                 View Portfolio
               </Button>

@@ -74,9 +74,9 @@ const config = {
         "accordion-up": "accordion-up 0.2s ease-out",
       },
     },
-    fontFamily: {
-      gibson: ["canada-type-gibson", "sans-serif"],
-    },
+    // fontFamily: {
+    //   gibson: ["canada-type-gibson", "sans-serif"],
+    // },
     fontWeight: {
       thin: "100",
       light: "200",
