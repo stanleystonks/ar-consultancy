@@ -138,12 +138,12 @@ export default function Header() {
           <h3 className="mb-0 w-full translate-y-[-3rem] pr-[39vw] text-xl font-bold xs:text-xl md:text-3xl xl:mb-10 xl:translate-y-0">
             Are you ready to take your music to the next level?
           </h3>
-          <p className="w-full pr-[45vw] text-xl font-regular sm:text-2xl lg:text-3xl xl:text-2xl">
-            I'm <span>Marvin Kuijs</span>, your personal A&R expert.
+          <p className="w-full pr-[45vw] text-lg font-regular sm:text-2xl lg:text-3xl xl:text-2xl">
+            I'm <span>Marvin Kuijs</span>, your personal<br className="lg:hidden" /> A&R expert.
           </p>
 
           <div className="absolute bottom-[-80%] left-0 w-full flex-col bg-transparent px-8 text-center md:px-12 lg:px-20 xl:static xl:px-0 xl:pr-[45vw] 2xl:pr-[50vw]">
-            <p className="text-lg font-regular sm:text-xl lg:text-2xl xl:text-left">
+            <p className="text-md font-regular sm:text-xl lg:text-2xl xl:text-left">
               From deep track analysis and artist branding to career guidance,
               licensing, promotion, publishing and legal advice. I provide the
               insider strategies you need to grow, build income, protect, and

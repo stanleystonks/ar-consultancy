@@ -52,7 +52,7 @@ export default function Contact() {
 
       <div
         id="contact-form"
-        className="relative flex flex-col bg-[url('https://res.cloudinary.com/dbcydcneq/image/upload/v1710190351/ar-consultancy/studio-background_w6goyq.png')] bg-auto bg-no-repeat lg:flex-row-reverse lg:items-end lg:justify-between lg:bg-[length:800px_320px] lg:bg-left-top xl:bg-[length:900px_360px]"
+        className="relative flex flex-col lg:flex-row-reverse lg:items-end lg:justify-between"
       >
         <div className="lg:pb-18 bg-card px-8 py-12 md:px-12 lg:w-1/2 lg:translate-x-[-5rem] lg:px-20">
           <form onSubmit={handleSubmit} className="flex flex-col">
@@ -143,11 +143,11 @@ export default function Contact() {
         </div>
 
         <div className="flex-1 justify-between px-8 pb-8 md:px-12 lg:px-20 lg:pb-0">
-          <div className="flex w-full items-center justify-center py-[8rem] lg:mb-4 xl:py-[9.5rem]">
+          <div className="flex w-full items-center justify-center mb-12 py-[8rem] lg:mb-4 xl:py-[9rem]">
             <Link href="https://stan.store/marvinkuijs" replace>
               <Button
                 variant="outline"
-                className="m-auto w-min rounded-sm text-lg md:p-6 lg:text-xl"
+                className="rounded-sm px-8 py-4 text-2xl md:px-10 md:py-6 md:text-4xl 2xl:px-12 2xl:py-8"
               >
                 Book now
               </Button>
