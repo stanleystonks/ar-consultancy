@@ -146,7 +146,6 @@ export default function Contact() {
           <div className="flex w-full items-center justify-center mb-12 py-[8rem] lg:mb-4 xl:py-[9rem]">
             <Link href="https://stan.store/marvinkuijs" replace>
               <Button
-                variant="outline"
                 className="rounded-sm px-8 py-4 text-2xl md:px-10 md:py-6 md:text-4xl 2xl:px-12 2xl:py-8"
               >
                 Book now
