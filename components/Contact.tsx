@@ -143,11 +143,9 @@ export default function Contact() {
         </div>
 
         <div className="flex-1 justify-between px-8 pb-8 md:px-12 lg:px-20 lg:pb-0">
-          <div className="flex w-full items-center justify-center mb-12 py-[8rem] lg:mb-4 xl:py-[9rem]">
+          <div className="mb-12 flex w-full items-center justify-center py-[8rem] lg:mb-4 xl:py-[9rem]">
             <Link href="https://stan.store/marvinkuijs" replace>
-              <Button
-                className="rounded-sm px-8 py-4 text-2xl md:px-10 md:py-6 md:text-4xl 2xl:px-12 2xl:py-8"
-              >
+              <Button className="rounded-sm px-8 py-4 text-2xl md:px-10 md:py-6 md:text-4xl 2xl:px-12 2xl:py-8">
                 Book now
               </Button>
             </Link>
@@ -162,9 +160,9 @@ export default function Contact() {
               Let's Connect:
             </p>
 
-            <div className="flex items-center gap-3">
+            <div className="relative z-50 flex items-center gap-3">
               {/* Facebook */}
-              <a href="https://www.facebook.com/MarvinKuijs/" target="blank">
+              <a href="https://www.facebook.com/MarvinKuijs/" target="_blank">
                 <svg
                   className="w-8 lg:w-12"
                   viewBox="0 0 45 46"
@@ -193,7 +191,10 @@ export default function Contact() {
                 </svg>
               </a>
               {/* Instagram */}
-              <a href="https://www.instagram.com/armarvinkuijs/" target="blank">
+              <a
+                href="https://www.instagram.com/armarvinkuijs/"
+                target="_blank"
+              >
                 <svg
                   className="w-8 lg:w-12"
                   viewBox="0 0 46 46"
@@ -222,7 +223,7 @@ export default function Contact() {
               {/* LinkedIn */}
               <a
                 href="https://www.linkedin.com/in/marvin-kuijs-4b01b1a/?originalSubdomain=nl"
-                target="blank"
+                target="_blank"
               >
                 <svg
                   className="w-8 lg:w-12"
